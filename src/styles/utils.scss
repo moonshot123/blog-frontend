@@ -1,0 +1,4 @@
+// scss 작성한것을 전부 불러오기 및 반응형 화면으로 만들기
+@import 'lib/all';
+
+$breakpoints: (small: 320px, medium: 768px, large: 1024px, wide: 1400px);
