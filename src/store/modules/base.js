@@ -1,17 +1,16 @@
-//로그인상태, 삭제및 로그인할때 보이는 모달메시지관리
-import {createAction, handleActions} from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 
-import {Map} from 'immutable';
-import {pender} from 'redux-pender';
+import { Map } from 'immutable';
+import { pender } from 'redux-pender';
 
-//action types
+// action types
 
-//action creators
+// action creators
 
-//initial state
+// initial state
 const initialState = Map({});
 
-//reduce
+// reducer
 export default handleActions({
 
-},initialState);
+}, initialState);

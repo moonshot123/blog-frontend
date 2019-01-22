@@ -1,17 +1,16 @@
-//포스트 목록 상태를 다룹니다.
-import {createAction, handleActions} from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 
-import {Map} from 'immutable';
-import {pender} from 'redux-pender';
+import { Map } from 'immutable';
+import { pender } from 'redux-pender';
 
-//action types
+// action types
 
-//action creators
+// action creators
 
-//initial state
+// initial state
 const initialState = Map({});
 
-//reduce
+// reducer
 export default handleActions({
 
-},initialState);
+}, initialState);

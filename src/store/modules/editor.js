@@ -1,17 +1,28 @@
-//마크다운 에디터 상태를 정리
-import {createAction, handleActions} from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 
-import {Map} from 'immutable';
-import {pender} from 'redux-pender';
+import { Map } from 'immutable';
+import { pender } from 'redux-pender';
 
-//action types
+// action types
+const INITIALIZE = 'editor/INITIALIZE';
+const CHANGE_INPUT = 'editor/CHANGE_INPUT';
 
-//action creators
+// action creators
+export const initialize = createAction(INITIALIZE);
+export const changeInput = createAction(CHANGE_INPUT);
 
-//initial state
-const initialState = Map({});
+// initial state
+const initialState = Map({
+  title: '',
+  markdown: '',
+  tags: ''
+});
 
-//reduce
+// reducer
 export default handleActions({
-
-},initialState);
+  [INITIALIZE]: (state, action) => initialState,
+  [CHANGE_INPUT]: (state, action) => {
+    const { name, value } = action.payload;
+    return state.set(name, value);
+  }
+}, initialState)

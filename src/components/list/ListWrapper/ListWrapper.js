@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './ListWrapper.scss';
+import './ListWrapper.scss';
 
 
 const ListWrapper = ({children}) => (
-    <div className={('list-wrapper')}>
-        {children}
-    </div>
-)
+  <div className={('list-wrapper')}>
+    {children}
+  </div>
+);
 
 export default ListWrapper;
