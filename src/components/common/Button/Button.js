@@ -19,7 +19,7 @@ const Button = ({
   return (
     <Element 
       to={to} 
-      className={('button' + theme + { disabled })} 
+      className={(`button ${theme} ${disabled}`)} 
       onClick={disabled ? () => null : onClick}>
       {children}
     </Element>
